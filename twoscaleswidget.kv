@@ -1,0 +1,30 @@
+<TwoScalesTestLayout>:
+    orientation: 'vertical'
+    on_touch_down: self.ids.wdgt1.show_data('data.json')
+    TwoScalesWidget:
+        id: wdgt1
+ 
+
+<TwoScalesWidget>:
+    Button:
+        id: btn1
+        text: root.val1 + root.unit1
+        font_size: 40
+        canvas:
+            Color:
+                rgba: 0,1,0.9,0.8
+            Line:
+                circle:(self.center_x, self.center_y, 100, -150, root.num1)
+                width: 15
+                cap: 'round'
+    Button:
+        id: btn2
+        text: root.val2 + root.unit2
+        font_size: 40
+        canvas:
+            Color:
+                rgba: 0,1,0.9,0.8
+            Line:
+                circle:(self.center_x, self.center_y, 100, -150, root.num2)
+                width: 15
+                cap: 'round'
